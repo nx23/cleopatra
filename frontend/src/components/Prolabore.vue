@@ -1,6 +1,6 @@
 <script setup>
-import {reactive} from 'vue'
-import {Prolabore} from '../../wailsjs/go/main/App'
+import {reactive} from "vue"
+import {Prolabore} from "../../wailsjs/go/main/App"
 
 const data = reactive({
   workDayPerWeek: null,
