@@ -1,7 +1,7 @@
 <script>
   import { ref, provide } from "vue";
   export default {
-    setup(props, { slots }) {
+    setup(_, { slots }) {
       const tabTitles = ref(slots.default().map((tab) => tab.props.title));
       const selectedTab = ref(tabTitles.value[0]);
 
