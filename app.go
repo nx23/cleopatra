@@ -23,9 +23,12 @@ func (a *App) startup(ctx context.Context) {
 }
 
 func (a *App) Prolabore(workDayPerWeek int, hoursPerDay int, pretendedSalary int) string {
-    t := time.Date(time.Now().Year(), time.Now().Month(), 32, 0, 0, 0, 0, time.UTC)
-    daysInMonth := 32 - t.Day()
-    weeksInMonth := float64(daysInMonth / 7)
+	t := time.Date(time.Now().Year(), time.Now().Month(), 32, 0, 0, 0, 0, time.UTC)
+	daysInMonth := 32 - t.Day()
+	weeksInMonth := float64(daysInMonth / 7)
 	salaryPerHour := pretendedSalary / (workDayPerWeek * hoursPerDay * int(weeksInMonth))
+	if salaryPerHour <= 0 {
+		return "Horas trabalhadas muito baixas para o salário desejado"
+	}
 	return fmt.Sprintf("Você deveria cobrar %d por hora este mês", salaryPerHour)
 }
