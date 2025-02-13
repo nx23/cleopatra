@@ -1,5 +1,4 @@
 <template>
-  <div>Home</div>
   <img id="logo" alt="Cleopatra logo" src="../assets/images/logo-universal.png"/>
 </template>
 
