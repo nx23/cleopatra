@@ -1,6 +1,6 @@
 <template class="container">
   <TabsWrapper>
-    <Tab title="Menu 1"><Prolabore/></Tab>
+    <Tab title="Prolabore"><Prolabore/></Tab>
     <Tab title="Menu 2">Hello from Tab 2</Tab>
     <Tab title="Menu 3">Hello from Tab 3</Tab>
   </TabsWrapper>
